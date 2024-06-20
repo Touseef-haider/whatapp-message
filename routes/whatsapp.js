@@ -7,7 +7,7 @@ const { sendWhatsappMessage, } = require("../utils/whatsapp")
 router.post("/", async (req, res, next) => {
     try {
 
-        const recipient = "923312924590"
+        const recipient = req.body.number
         const text = req.body.text
 
         console.log("text", text)
