@@ -23,7 +23,8 @@ app.use((err, req, res,next) => {
     const message = err?.message
 
     return res.status(statusCode).json({
-        message: err,
+        err: err,
+        message: message,
         status: statusCode
     })
 
